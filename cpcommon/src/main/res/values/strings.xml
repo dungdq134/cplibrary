@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cpcmn_talkback_agegroup_7">Materiał przeznaczony dla widzów powyżej siódmego roku życia</string>
+    <string name="cpcmn_talkback_agegroup_12">Materiał przeznaczony dla widzów powyżej dwunastego roku życia</string>
+    <string name="cpcmn_talkback_agegroup_16">Materiał przeznaczony dla widzów powyżej szesnastego roku życia</string>
+    <string name="cpcmn_talkback_agegroup_18">Materiał przeznaczony dla widzów pełnoletnich</string>
+
+    <string name="cpcmn_talkback_underage_classification_violence">Materiał może zawierać sceny przemocy</string>
+    <string name="cpcmn_talkback_underage_classification_drugs">Materiał może zawierać sceny pokazujące picie alkoholu, palenie papierosów i zażywanie narkotyków</string>
+    <string name="cpcmn_talkback_underage_classification_sex">Materiał może zawierać sceny seksu i nagości</string>
+    <string name="cpcmn_talkback_underage_classification_vulgar_language">Materiał może zawierać przekleństwa</string>
+
+    <string name="cpcmn_talkback_accessibility_features_audio_description">Materiał z audiodeskrypcją</string>
+    <string name="cpcmn_talkback_accessibility_features_subtitles">Materiał z napisami</string>
+    <string name="cpcmn_talkback_accessibility_features_sign_language">Materiał z językiem migowym</string>
+
+</resources>

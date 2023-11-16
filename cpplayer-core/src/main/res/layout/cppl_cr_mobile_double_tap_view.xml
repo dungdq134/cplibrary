@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+        android:id="@+id/double_tap_ripple"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:layout_gravity="center"
+        android:background="?selectableItemBackgroundBorderless"
+        android:theme="@style/DoubleTapRippleTheme" />
+
+    <TextView
+        android:id="@+id/double_tap_text"
+        style="?attr/doubleTapTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/cppl_cr_double_tap_forward"
+        android:visibility="invisible" />
+
+</merge>

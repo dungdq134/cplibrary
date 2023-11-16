@@ -1,0 +1,22 @@
+apply plugin: "maven-publish"
+
+configurations.maybeCreate("default")
+def publishArtifact = artifacts.add("default", file('GemiusSDK_2.0.7.aar'))
+
+publishing {
+    publications {
+        aar(MavenPublication) {
+            groupId = 'pl.cyfrowypolsat'
+            artifactId = 'gemius'
+            version = '2.0.7'
+            artifact publishArtifact
+        }
+    }
+
+    repositories {
+        maven {
+            name = 'cprepo'
+            url = "${project.projectDir}/../cprepo"
+        }
+    }
+}

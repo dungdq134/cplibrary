@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pl.cyfrowypolsat.cpplayercore.tv.leanback.unmodified.PlaybackTransportRowView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/transport_row"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:paddingStart="45dp"
+    android:paddingEnd="?attr/browsePaddingEnd">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <FrameLayout
+            android:id="@+id/secondary_controls_dock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/back_button_container"
+            tools:layout_height="40dp" />
+
+        <LinearLayout
+            android:id="@+id/back_button_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/secondary_controls_dock"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/back_button"
+                style="?attr/playbackSecondaryControlsButtonStyle"
+                android:src="@drawable/cppl_cr_tv_cancel_action_drawable"
+                tools:layout_height="wrap_content"
+                tools:layout_width="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingEnd="194dp"
+                android:paddingStart="10dp">
+
+                <FrameLayout
+                    android:id="@+id/controls_dock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/media_title"
+                        style="?attr/detailsDescriptionTitleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/age_restriction"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:paddingStart="18dp"
+                        android:paddingEnd="16dp"
+                        android:maxLines="1"/>
+
+                    <ImageView
+                        android:id="@+id/age_restriction"
+                        android:layout_width="11dp"
+                        android:layout_height="11dp"
+                        app:layout_constraintEnd_toStartOf="@id/media_badges"
+                        app:layout_constraintTop_toTopOf="@id/media_title"
+                        app:layout_constraintBottom_toBottomOf="@id/media_title"
+                        android:scaleType="fitXY"/>
+
+                    <pl.cyfrowypolsat.cpcommon.presentation.ratingsystem.MediaBadgesView
+                        android:id="@+id/media_badges"
+                        android:layout_width="wrap_content"
+                        android:layout_height="11dp"
+                        android:paddingStart="3dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/media_title"
+                        app:layout_constraintBottom_toBottomOf="@id/media_title" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <androidx.leanback.widget.ThumbsBar
+                android:id="@+id/thumbs_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/lb_playback_transport_thumbs_bottom_margin"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_marginStart="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.media3.ui.DefaultTimeBar
+                    android:id="@+id/playback_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/current_time"
+                    app:bar_height="5dp"
+                    app:ad_marker_color="@color/cppl_cr_tv_white"
+                    app:played_ad_marker_color="@color/cppl_cr_white_solid_transparent_60"
+                    app:played_color="@color/cppl_cr_color_primary"
+                    app:scrubber_enabled_size="0dp"
+                    app:scrubber_dragged_size="24dp"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/current_time"
+                    style="?attr/playbackControlsTimeStyle"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/time_separator"
+                    android:layout_marginStart="5dp"
+                    android:textAlignment="textEnd"
+                    tools:text="3:29" />
+
+                <TextView
+                    android:id="@+id/time_separator"
+                    style="?attr/playbackControlsTimeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/total_time"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="/" />
+
+                <TextView
+                    android:id="@+id/total_time"
+                    style="?attr/playbackControlsTimeStyle"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:textAlignment="textStart"
+                    tools:text="43:29" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</pl.cyfrowypolsat.cpplayercore.tv.leanback.unmodified.PlaybackTransportRowView>

@@ -1,0 +1,25 @@
+package pl.cyfrowypolsat.cpstats.core.model
+
+data class PlayerData(
+        val playbackTraceId: String,
+        val mediaId: MediaId,
+        val mediaTitle: String,
+        val isLive: Boolean,
+        val licenseId: String?,
+        val sellModel: String?,
+        val currentPositionMs: Long,
+        val durationMs: Long,
+        val currentQuality: Int,
+        val frameRate: Float,
+        val droppedFramesCount: Long,
+        val isPlaying: Boolean,
+        val isPlayingAdvert: Boolean,
+        val currentVolumeLevel: Float,
+        val streamingSpeed: Long,
+        val playbackDurationMs: Long,
+        val sourceInfo: SourceInfo,
+        val videoBytesLoaded: Long,
+        val audioBytesLoaded: Long,
+        val advertsCuePoints: List<Float>,
+        val advertsRequestUrl: String?,
+        val activeOverlays: List<OverlayData>)

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/cppl_cr_mobile_player_background">
+
+    <pl.cyfrowypolsat.cpplayercore.mobile.lock.SlideToUnlockButton
+        android:id="@+id/unlock_button"
+        style="@style/CPPlayerCore.Mobile.SlideToUnlockButtonStyle"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/unlock"
+        style="?attr/unlockTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/unlock_button"
+        android:layout_alignTop="@id/unlock_button"
+        android:layout_alignEnd="@id/unlock_button"
+        android:layout_alignStart="@id/unlock_button"
+        android:gravity="center"
+        tools:textColor="@color/cppl_cr_white_solid"
+        android:text="@string/cppl_cr_unlock" />
+
+    <TextView
+        android:id="@+id/unlock_footer"
+        style="?attr/unlockFooterTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/unlock_button"
+        android:layout_centerHorizontal="true"
+        tools:textColor="@color/cppl_cr_white_solid"
+        android:text="@string/cppl_cr_drag_to_unlock" />
+
+
+</RelativeLayout>

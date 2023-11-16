@@ -1,0 +1,21 @@
+apply plugin: 'maven-publish'
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = project.groupId
+            artifactId = project.artifactId
+            version = android.defaultConfig.versionName
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
+    repositories {
+        maven {
+            name = 'cprepo'
+            url = "${project.projectDir}/../cprepo"
+        }
+    }
+}

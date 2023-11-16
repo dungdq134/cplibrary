@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:background="@color/cppl_cr_mobile_player_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/player_top_controls_container"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="top"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="14dp"
+        android:orientation="horizontal">
+
+        <pl.cyfrowypolsat.cpplayercore.mobile.view.PlayerImageButton
+            android:id="@+id/player_subtitles_and_audio_button"
+            style="@style/CPPlayerCore.Mobile.ButtonStyle"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/cppl_cr_talkback_subtitles_and_audio"
+            android:src="@drawable/cppl_cr_common_ic_subtitles"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <pl.cyfrowypolsat.cpplayercore.mobile.view.PlayerImageButton
+            android:id="@+id/player_settings_button"
+            style="@style/CPPlayerCore.Mobile.ButtonStyle"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:layout_toRightOf="@id/player_subtitles_and_audio_button"
+            android:contentDescription="@string/cppl_cr_settings"
+            android:src="@drawable/cppl_cr_common_ic_settings"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <pl.cyfrowypolsat.cpplayercore.mobile.view.PlayerImageButton
+            android:id="@+id/player_padlock_button"
+            style="@style/CPPlayerCore.Mobile.ButtonStyle"
+            android:layout_width="32dp"
+            android:padding="8dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:layout_toRightOf="@id/player_settings_button"
+            android:contentDescription="@string/cppl_cr_padlock"
+            android:src="@drawable/cppl_cr_common_ic_padlock" />
+
+        <pl.cyfrowypolsat.cpplayercore.mobile.view.PlayerImageButton
+            android:id="@+id/player_teravolt_button"
+            style="@style/CPPlayerCore.Mobile.ButtonStyle"
+            android:layout_width="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:layout_toRightOf="@id/player_padlock_button"
+            android:contentDescription="@string/cppl_cr_settings"
+            android:scaleType="fitCenter"
+            android:src="@drawable/cppl_cr_mobile_ic_overlay"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+        <pl.cyfrowypolsat.cpchromecast.presentation.mediaroutebutton.ChromecastMediaRouteButton
+            android:id="@+id/player_chromecast_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/player_teravolt_button"
+            android:background="@drawable/cppl_cr_mobile_background_ripple"
+            android:contentDescription="@string/cppl_cr_talkback_chromecast"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <pl.cyfrowypolsat.cpplayercore.mobile.view.PlayerImageButton
+            android:id="@+id/player_close_button"
+            style="@style/CPPlayerCore.Mobile.ButtonStyle"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="0dp"
+            android:contentDescription="@string/cppl_cr_talkback_close_player"
+            android:src="@drawable/cppl_cr_common_ic_close" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/player_external_layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/player_bottom_controls_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="12dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/player_controls_and_title_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <pl.cyfrowypolsat.cpplayercore.mobile.view.PlayerImageButton
+                    android:id="@+id/player_rewind_button"
+                    style="@style/CPPlayerCore.Mobile.BackgroundButtonStyle"
+                    android:contentDescription="@string/cppl_cr_talkback_rewind"
+                    android:src="@drawable/cppl_cr_common_ic_rewind_10sec" />
+
+                <FrameLayout
+                    android:id="@+id/player_play_pause_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <pl.cyfrowypolsat.cpplayercore.mobile.view.PlayerImageButton
+                        android:id="@id/exo_play_pause"
+                        style="@style/CPPlayerCore.Mobile.BackgroundLargeButtonStyle"
+                        android:src="@drawable/exo_styled_controls_pause" />
+                </FrameLayout>
+
+                <pl.cyfrowypolsat.cpplayercore.mobile.view.PlayerImageButton
+                    android:id="@+id/player_replay"
+                    style="@style/CPPlayerCore.Mobile.BackgroundLargeButtonStyle"
+                    android:contentDescription="@string/cppl_cr_talkback_start_over"
+                    android:src="@drawable/cppl_cr_mobile_ic_start_over"
+                    android:visibility="gone" />
+
+                <pl.cyfrowypolsat.cpplayercore.mobile.view.PlayerImageButton
+                    android:id="@+id/player_fast_forward_button"
+                    style="@style/CPPlayerCore.Mobile.BackgroundButtonStyle"
+                    android:contentDescription="@string/cppl_cr_talkback_ffw"
+                    android:src="@drawable/cppl_cr_common_ic_fast_forward_10sec" />
+
+                <pl.cyfrowypolsat.cpplayercore.mobile.view.PlayerImageButton
+                    android:id="@+id/player_start_over"
+                    style="@style/CPPlayerCore.Mobile.BackgroundButtonStyle"
+                    android:contentDescription="@string/cppl_cr_talkback_start_over"
+                    android:src="@drawable/cppl_cr_mobile_ic_start_over"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/player_media_title_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/player_media_title"
+                    style="?attr/playbackMediaTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="6dp"
+                    android:textColor="@color/cppl_cr_white_solid"
+                    tools:text="Media title" />
+
+                <ImageView
+                    android:id="@+id/player_age_restriction"
+                    android:layout_width="11dp"
+                    android:layout_height="11dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY" />
+
+                <pl.cyfrowypolsat.cpcommon.presentation.ratingsystem.MediaBadgesView
+                    android:id="@+id/player_media_badges"
+                    android:layout_width="wrap_content"
+                    android:layout_height="11dp"
+                    android:layout_gravity="center"
+                    android:paddingStart="3dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.media3.ui.DefaultTimeBar
+                android:id="@+id/exo_progress"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:layout_toStartOf="@id/player_time_container"
+                app:ad_marker_color="@color/cppl_cr_white_solid"
+                app:bar_height="5dp"
+                app:buffered_color="@color/cppl_cr_white_solid_transparent_33"
+                app:played_ad_marker_color="@color/cppl_cr_white_solid_transparent_60"
+                app:played_color="@color/cppl_cr_color_primary"
+                app:scrubber_dragged_size="24dp"
+                app:scrubber_enabled_size="24dp"
+                app:unplayed_color="@color/cppl_cr_white_solid_transparent_33" />
+
+            <FrameLayout
+                android:id="@+id/player_time_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp">
+
+                <LinearLayout
+                    android:id="@+id/player_time_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/player_current_time"
+                        style="?attr/playbackControlsTimeStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textAlignment="textEnd"
+                        tools:text="00:03:29"
+                        tools:textColor="@color/cppl_cr_white_solid" />
+
+                    <TextView
+                        android:id="@+id/player_time_separator"
+                        style="?attr/playbackControlsTimeStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:gravity="center"
+                        android:text="/"
+                        tools:textColor="@color/cppl_cr_white_solid" />
+
+                    <TextView
+                        android:id="@+id/player_duration_time"
+                        style="?attr/playbackControlsTimeStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textAlignment="textStart"
+                        tools:text="00:43:29"
+                        tools:textColor="@color/cppl_cr_white_solid" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/player_live_time_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/player_live_current_time"
+                        style="?attr/playbackControlsTimeStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/cppl_cr_white_solid"
+                        android:visibility="invisible"
+                        tools:text="00:03:29" />
+
+                    <TextView
+                        android:id="@+id/player_live_edge_indicator"
+                        style="?attr/playbackControlsAtLiveEdgeIndicatorStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/cppl_cr_mobile_live_edge_indicator_ripple"
+                        android:drawablePadding="5dp"
+                        android:paddingStart="8dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="4dp"
+                        android:text="@string/cppl_cr_is_at_live_edge"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/cppl_cr_common_live_edge_color"
+                        android:visibility="visible"
+                        app:drawableStartCompat="@drawable/cppl_cr_common_ic_live_edge_bullet" />
+                </FrameLayout>
+            </FrameLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>

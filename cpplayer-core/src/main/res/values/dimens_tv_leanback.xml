@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="lb_details_description_title_baseline">32dp</dimen>
+    <dimen name="lb_playback_transport_progressbar_active_radius">10dp</dimen>
+    <dimen name="lb_control_icon_width">0dp</dimen>
+    <dimen name="lb_playback_controls_child_margin_default">0dp</dimen>
+</resources>

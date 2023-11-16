@@ -1,0 +1,155 @@
+# To enable ProGuard in your project, edit project.properties
+# to define the proguard.config property as described in that file.
+#
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in ${sdk.dir}/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the ProGuard
+# include property in project.properties.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+-optimizations !code/simplification/cast,!field/*,!class/merging/*
+-optimizationpasses 5
+-allowaccessmodification
+
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-verbose
+-keepparameternames
+-keepattributes *Annotation*
+-keepattributes InnerClasses
+-keepattributes EnclosingMethod
+
+# --------------- Enums, see http://proguard.sourceforge.net/manual/examples.html#enumerations
+-keepclassmembers,allowoptimization enum * {
+    <fields>;
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+# --------------- Android
+-dontwarn com.google.android.gms.** # needed if not including Google Play Services to application
+-keep public class com.google.android.gms.**
+-keepclassmembers public class com.google.android.gms.** {
+public *;
+}
+
+-keep public class android.webkit.WebSettings
+-keepclassmembers class android.webkit.WebSettings {
+public <init>(android.content.Context, android.webkit.WebView);
+}
+
+# Keep setters in Views so that animations can still work.
+# see http://proguard.sourceforge.net/manual/examples.html#beans
+-keepclassmembers public class * extends android.view.View {
+   void set*(***);
+   *** get*();
+}
+
+-keep class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator *;
+}
+
+-keepclassmembers class **.R$* {
+    public static <fields>;
+}
+
+# The support library contains references to newer platform versions.
+# Don't warn about those in case this app is linking against an older
+# platform version.  We know about them, and they are safe.
+-dontwarn android.support.**
+
+# --------------- AdOceanSDK
+-keep class com.gemius.sdk.adocean.** { *; }
+
+-keep public interface com.gemius.sdk.adocean.internal.mraid.MraidHost
+-keepclassmembers public interface com.gemius.sdk.adocean.internal.mraid.MraidHost {
+*;
+}
+
+-keepclassmembers class com.gemius.sdk.adocean.internal.mraid.MraidController {
+   public *;
+}
+
+-keep public enum com.gemius.sdk.adocean.internal.mraid.MraidController$ViewState
+-keep public enum com.gemius.sdk.adocean.internal.mraid.MraidController$PlacementType
+-keepclassmembernames public enum com.gemius.sdk.adocean.internal.mraid.MraidController$PlacementType { *; }
+-keep public enum com.gemius.sdk.adocean.internal.common.AdType
+
+-keep public class com.gemius.sdk.adocean.internal.mraid.MraidController
+-keepclassmembers public class com.gemius.sdk.adocean.internal.mraid.MraidController {
+*;
+}
+
+-keep class com.gemius.sdk.adocean.internal.mraid.AdContainerPosition { *; }
+-keep class com.gemius.sdk.adocean.internal.mraid.ScreenRegion { *; }
+
+-keep public class com.gemius.sdk.adocean.internal.common.Dimension
+-keepclassmembers public class com.gemius.sdk.adocean.internal.common.Dimension {
+*;
+}
+
+-keep public enum com.gemius.sdk.adocean.internal.common.Dimension$Type
+
+-keep public class com.gemius.sdk.adocean.internal.preview.*
+-keepclassmembers public class com.gemius.sdk.adocean.internal.preview.* {
+   public *;
+}
+
+-keeppackagenames com.gemius.sdk.adocean.internal
+-keeppackagenames com.gemius.sdk.adocean.internal.preview
+
+-keep public class com.gemius.sdk.adocean.internal.communication.dto.AdResponse
+-keepclassmembers public class com.gemius.sdk.adocean.internal.communication.dto.AdResponse {
+*;
+}
+
+# --------------- Audience
+-keep class com.gemius.sdk.audience.BaseEvent { *; }
+-keep class com.gemius.sdk.audience.AudienceEvent { *; }
+-keep class com.gemius.sdk.audience.NetpanelEvent { *; }
+-keep class com.gemius.sdk.audience.internal.EnqueuedEvent { *; }
+
+# --------------- Stream
+-keep class com.gemius.sdk.stream.** { *; }
+
+-keep class com.gemius.sdk.stream.Player$Content
+-keepclassmembers class com.gemius.sdk.stream.Player$Content {
+*;
+}
+
+# --------------- Internal
+-keep class com.gemius.sdk.internal.** { *; }
+
+-keep class com.gemius.sdk.internal.log.SDKLog
+-keepclassmembers class com.gemius.sdk.internal.log.SDKLog{
+public *;
+}
+
+# For cookies
+-keepclassmembers class * implements java.io.Serializable {
+    static final long serialVersionUID;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+}
+
+# --------------- Other Gemius SDK classes
+-keep class com.gemius.sdk.Config { *; }
+-keep class com.gemius.sdk.internal.errorreport.acra.GemiusSdkVersionCollector { *; }
+
+# --------------- Gson
+# Gson uses generic type information stored in a class file when working with fields. Proguard
+# removes such information by default, so configure it to keep all of it.
+-keepattributes Signature
+
+# Prevent proguard from stripping interface information from TypeAdapterFactory,
+# JsonSerializer, JsonDeserializer instances (so they can be used in @JsonAdapter)
+-keep class * implements com.google.gson.TypeAdapterFactory
+-keep class * implements com.google.gson.JsonSerializer
+-keep class * implements com.google.gson.JsonDeserializer
+
+# --------------- Huawei Mobile Services Ads
+-keep class com.huawei.hms.ads.** { *; }
+-keep interface com.huawei.hms.ads.** { *; }

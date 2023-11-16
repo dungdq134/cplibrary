@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/cppl_cr_mobile_slide_to_unlock_button_progress_color"/>
+            <corners android:radius="360dp"/>
+
+            <padding android:bottom="14.5dp" android:top="14.5dp" android:left="13dp" android:right="13dp" />
+        </shape>
+    </item>
+
+
+    <item
+        android:width="16dp"
+        android:height="13dp"
+        android:drawable="@drawable/cppl_cr_common_ic_unlock_arrow"
+        android:gravity="center" />
+</layer-list>

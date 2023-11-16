@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/underage_classification_violence"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="3dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/cpcmn_common_ic_polish_tv_rating_system_violence_2022"
+        android:contentDescription="@string/cpcmn_talkback_underage_classification_violence"
+        android:visibility="gone"
+        tools:vibility="visible" />
+
+    <ImageView
+        android:id="@+id/underage_classification_drugs"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="3dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/cpcmn_common_ic_polish_tv_rating_system_drugs_2022"
+        android:contentDescription="@string/cpcmn_talkback_underage_classification_drugs"
+        android:visibility="gone"
+        tools:vibility="visible" />
+
+    <ImageView
+        android:id="@+id/underage_classification_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="3dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/cpcmn_common_ic_polish_tv_rating_system_sex_2022"
+        android:contentDescription="@string/cpcmn_talkback_underage_classification_sex"
+        android:visibility="gone"
+        tools:vibility="visible" />
+
+    <ImageView
+        android:id="@+id/underage_classification_vulgar_language"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="3dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/cpcmn_common_ic_polish_tv_rating_system_vulgar_language_2022"
+        android:contentDescription="@string/cpcmn_talkback_underage_classification_vulgar_language"
+        android:visibility="gone"
+        tools:vibility="visible" />
+
+    <ImageView
+        android:id="@+id/accessibility_feature_audio_description"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="3dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/cpcmn_common_ic_badge_audio_description"
+        android:contentDescription="@string/cpcmn_talkback_accessibility_features_audio_description"
+        android:visibility="gone"
+        tools:vibility="visible" />
+
+    <ImageView
+        android:id="@+id/accessibility_feature_subtitles"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="3dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/cpcmn_common_ic_badge_subtitles"
+        android:contentDescription="@string/cpcmn_talkback_accessibility_features_subtitles"
+        android:visibility="gone"
+        tools:vibility="visible" />
+
+    <ImageView
+        android:id="@+id/accessibility_feature_sign_language"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="3dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/cpcmn_common_ic_badge_sign_language"
+        android:contentDescription="@string/cpcmn_talkback_accessibility_features_sign_language"
+        android:visibility="gone"
+        tools:vibility="visible" />
+
+</LinearLayout>

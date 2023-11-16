@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cpdata_title_textview_color">#ffffff</color>
+    <color name="cpdata_description_textview_color">#a9aeb4</color>
+</resources>

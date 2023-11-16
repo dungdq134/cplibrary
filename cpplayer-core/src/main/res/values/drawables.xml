@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="exo_styled_controls_pause">@drawable/cppl_cr_common_ic_pause</drawable>
+    <drawable name="exo_styled_controls_play">@drawable/cppl_cr_common_ic_play</drawable>
+</resources>

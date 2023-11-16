@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cppl_cr_color_primary">#EEEEEE</color>
+
+    <color name="cppl_cr_mobile_player_background">#CC000000</color>
+
+    <color name="cppl_cr_tv_white">#EEEEEE</color>
+    <color name="cppl_cr_white_solid">#FFFFFF</color>
+    <color name="cppl_cr_black_solid">#000000</color>
+    <color name="cppl_cr_white_solid_transparent_33">#33FFFFFF</color>
+    <color name="cppl_cr_white_solid_transparent_60">#60EEEEEE</color>
+    <color name="cppl_cr_black_solid_transparent_80">#80000000</color>
+    <color name="cppl_cr_black_solid_transparent_59">#59000000</color>
+    <color name="cppl_cr_grey_1b1b1c_transparent_cc">#771b1b1c</color>
+    <color name="cppl_cr_grey_9da2ab_transparent_cc">#779da2ab</color>
+
+    <color name="cppl_cr_transparent">#00000000</color>
+    <color name="cppl_cr_red_cc0000">#cc0000</color>
+    <color name="cppl_cr_grey_a9aeb4">#a9aeb4</color>
+    <color name="cppl_cr_grey_8a8f94">#8a8f94</color>
+    <color name="cppl_cr_grey_a9aeb4_transparent_70">#70a9aeb4</color>
+    <color name="cppl_cr_grey_1b1b1c">#1b1b1c</color>
+    <color name="cppl_cr_grey_1b1b1c_transparent_80">#CC1b1b1c</color>
+    <color name="cppl_cr_grey_1b1b1c_transparent_35">#591b1b1c</color>
+    <color name="cppl_cr_grey_5f5f5f">#5f5f5f</color>
+    <color name="cppl_cr_grey_9da2ab_transparent_10">#259da2ab</color>
+
+    <color name="cppl_cr_mobile_slide_to_unlock_button_progress_color">#9da2ab</color>
+    <color name="cppl_cr_tv_track_selection_item_color">#222324</color>
+    <color name="cppl_cr_tv_default_card_view_background">#212121</color>
+
+    <color name="cppl_cr_high_contrast_subtitles_color">#ffee00</color>
+
+</resources>

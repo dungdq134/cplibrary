@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="56dp"
+    android:layout_marginBottom="52dp"
+    android:gravity="bottom|end"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/tv_next_episode_credits_button"
+        style="?attr/nextEpisodeButtonStyle"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+        android:layout_marginEnd="14dp"
+        android:src="@drawable/cppl_cr_tv_cancel_action_drawable" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/tv_next_episode_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/tv_next_episode_play_next_button"
+            android:layout_alignTop="@id/tv_next_episode_play_next_button"
+            android:layout_alignEnd="@id/tv_next_episode_play_next_button"
+            android:layout_alignBottom="@id/tv_next_episode_play_next_button"
+            android:indeterminate="false"
+            android:progressDrawable="@drawable/cppl_cr_tv_next_episode_progress_drawable" />
+
+        <Button
+            android:id="@+id/tv_next_episode_play_next_button"
+            style="?attr/nextEpisodeButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:drawableLeft="@drawable/cppl_cr_common_ic_arrows"
+            android:drawablePadding="6dp"
+            android:text="@string/cppl_cr_next_episode" />
+    </RelativeLayout>
+
+</LinearLayout>

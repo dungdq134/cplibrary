@@ -1,0 +1,84 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+project.ext {
+    artifactId = 'cpstats'
+    groupId = 'pl.cyfrowypolsat'
+}
+
+android {
+    namespace 'pl.cyfrowypolsat.cpstats'
+    compileSdk project.ext.compileSdk
+
+    defaultConfig {
+        minSdk project.ext.minSdk
+        targetSdk project.ext.targetSdk
+        versionCode 1
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'proguard-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+
+    // AndroidX
+    implementation "androidx.core:core-ktx:$coreVersion"
+    implementation "androidx.lifecycle:lifecycle-process:$lifecycleVersion"
+
+    // RxJava 3
+    implementation "io.reactivex.rxjava3:rxkotlin:$rxKotlinVersion"
+    implementation "io.reactivex.rxjava3:rxandroid:$rxAndroidVersion"
+
+    // Gson
+    implementation "com.google.code.gson:gson:$gsonVersion"
+
+    // OkHttp
+    implementation platform("com.squareup.okhttp3:okhttp-bom:$okHttpVersion")
+    implementation "com.squareup.okhttp3:okhttp"
+    implementation "com.squareup.okhttp3:logging-interceptor"
+
+    // Timber
+    implementation "com.jakewharton.timber:timber:$timberVersion"
+
+    // GemiusSDK
+    implementation project(':gemius-sdk')
+    implementation "ch.acra:acra-http:$acraHttpVersion"
+    implementation "com.google.android.gms:play-services-appset:$playServicesAppsetVersion"
+    implementation "com.google.android.gms:play-services-base:$playServicesBaseVersion"
+    implementation "com.google.android.gms:play-services-ads:$playServicesAdsVersion"
+    implementation "com.huawei.hms:ads-identifier:$huaweiAdsIdentifierVersion"
+    implementation "androidx.work:work-runtime-ktx:$workRuntimeKtxVersion"
+
+    // AppsFlyer
+    implementation "com.appsflyer:af-android-sdk:$appsFlyerVersion"
+    
+    // Firebase
+    implementation platform("com.google.firebase:firebase-bom:$firebaseBOMVersion")
+    implementation "com.google.firebase:firebase-crashlytics-ktx"
+
+    //Tests
+    testImplementation "junit:junit:$junitVersion"
+}
+
+apply from: '../publish_cprepo.gradle'

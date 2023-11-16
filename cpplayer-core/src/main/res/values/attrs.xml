@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CPPlayerCore.Player">
+        <attr name="trackSelectionButtonStyle" format="reference" />
+        <attr name="trackSelectionNameTextViewStyle" format="reference" />
+        <attr name="trackSelectionItemNameTextViewStyle" format="reference" />
+        <attr name="settingsButtonStyle" format="reference" />
+        <attr name="subtitleSettingsNameTextViewStyle" format="reference" />
+        <attr name="subtitleSettingsItemNameTextViewStyle" format="reference" />
+
+        <attr name="playbackMediaTitleStyle" format="reference" />
+        <attr name="playbackControlsTimeStyle" format="reference" />
+        <attr name="playbackControlsAtLiveEdgeIndicatorStyle" format="reference" />
+        <attr name="playbackPrimaryControlsButtonStyle" format="reference" />
+        <attr name="playbackSecondaryControlsButtonStyle" format="reference" />
+
+        <attr name="playbackWatchLiveButtonStyle" format="reference" />
+
+        <attr name="seeAlsoHeaderStyle" format="reference" />
+        <attr name="seeAlsoRecyclerStyle" format="reference" />
+        <attr name="seeAlsoItemThumbnailStyle" format="reference" />
+        <attr name="seeAlsoItemPosterStyle" format="reference" />
+        <attr name="seeAlsoItemTitleStyle" format="reference" />
+        <attr name="seeAlsoItemGradientStyle" format="reference" />
+
+        <attr name="skipIntroButtonStyle" format="reference" />
+        <attr name="nextEpisodeButtonStyle" format="reference" />
+        <attr name="unlockFooterTextViewStyle" format="reference" />
+        <attr name="unlockTextViewStyle" format="reference" />
+
+        <attr name="doubleTapTextViewStyle" format="reference" />
+    </declare-styleable>
+
+</resources>

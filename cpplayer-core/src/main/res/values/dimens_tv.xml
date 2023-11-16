@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cppl_cr_tv_player_controls_padding_bottom">30dp</dimen>
+    <dimen name="cppl_cr_tv_player_controls_padding_bottom_channel">58dp</dimen>
+
+    <dimen name="cppl_cr_tv_see_also_thumbnail_width">205.5dp</dimen>
+    <dimen name="cppl_cr_tv_see_also_thumbnail_height">115.5dp</dimen>
+    <dimen name="cppl_cr_tv_see_also_poster_width">113dp</dimen>
+    <dimen name="cppl_cr_tv_see_also_poster_height">160dp</dimen>
+    <dimen name="cppl_cr_tv_see_also_item_vertical_spacing">9dp</dimen>
+    <dimen name="cppl_cr_tv_see_also_window_alignment_offset">12dp</dimen>
+    <dimen name="cppl_cr_tv_see_also_list_thumbnail_height">265dp</dimen>
+    <dimen name="cppl_cr_tv_see_also_list_poster_height">190dp</dimen>
+</resources>

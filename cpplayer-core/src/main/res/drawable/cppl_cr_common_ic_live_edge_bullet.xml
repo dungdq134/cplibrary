@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true">
+        <shape
+            android:shape="oval">
+            <solid android:color="@color/cppl_cr_grey_a9aeb4" />
+            <size
+                android:width="6dp"
+                android:height="6dp" />
+        </shape>
+    </item>
+    <item>
+        <shape
+            android:shape="oval">
+            <solid android:color="@color/cppl_cr_red_cc0000" />
+            <size
+                android:width="6dp"
+                android:height="6dp" />
+        </shape>
+    </item>
+</selector>

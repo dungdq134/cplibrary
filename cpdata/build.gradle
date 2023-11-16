@@ -1,0 +1,95 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.kapt'
+    id 'org.jetbrains.kotlin.plugin.parcelize'
+    id 'com.google.dagger.hilt.android'
+}
+
+project.ext {
+    artifactId = 'cpdata'
+    groupId = 'pl.cyfrowypolsat'
+}
+
+android {
+    namespace 'pl.cyfrowypolsat.cpdata'
+    compileSdk project.ext.compileSdk
+
+    defaultConfig {
+        minSdk project.ext.minSdk
+        targetSdk project.ext.targetSdk
+        versionCode 1
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'proguard-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // CPCommon
+    implementation project(':cpcommon')
+
+    // AndroidX
+    implementation "androidx.core:core-ktx:$coreVersion"
+    implementation "androidx.appcompat:appcompat:$appCompatVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+
+    // Material
+    implementation "com.google.android.material:material:$materialVersion"
+
+    // Dagger hilt
+    implementation "com.google.dagger:hilt-android:$daggerHiltVersion"
+    kapt "com.google.dagger:hilt-compiler:$daggerHiltVersion"
+
+    // Timber
+    implementation "com.jakewharton.timber:timber:$timberVersion"
+
+    // RxJava 3
+    implementation "io.reactivex.rxjava3:rxkotlin:$rxKotlinVersion"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava3:$retrofitVersion"
+
+
+    // OkHttp
+    implementation platform("com.squareup.okhttp3:okhttp-bom:$okHttpVersion")
+    implementation "com.squareup.okhttp3:okhttp"
+    implementation "com.squareup.okhttp3:logging-interceptor"
+
+    // Gson
+    implementation "com.google.code.gson:gson:$gsonVersion"
+
+    // Jackson
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin:$kotlinJacksonVersion"
+
+    // WebSocket
+    implementation "com.tinder.scarlet:scarlet:$scarletVersion"
+    implementation "com.tinder.scarlet:websocket-okhttp:$scarletVersion"
+    implementation "com.tinder.scarlet:message-adapter-gson:$scarletVersion"
+
+    //Tests
+    testImplementation "junit:junit:$junitVersion"
+}
+
+apply from: '../publish_cprepo.gradle'

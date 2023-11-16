@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cppl_cr_mobile_player_background"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="500dp"
+            android:orientation="vertical"
+            android:paddingTop="12dp">
+
+            <pl.cyfrowypolsat.cpplayercore.mobile.settings.SubtitleSettingsView
+                android:id="@+id/subtitles_settings_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+    <pl.cyfrowypolsat.cpplayercore.mobile.view.PlayerImageButton
+        android:id="@+id/subtitles_close_button"
+        style="@style/CPPlayerCore.Mobile.ButtonStyle"
+        android:layout_gravity="end|top"
+        android:layout_margin="14dp"
+        android:src="@drawable/cppl_cr_common_ic_close"
+        android:contentDescription="@string/cppl_cr_talkback_close"/>
+
+</FrameLayout>

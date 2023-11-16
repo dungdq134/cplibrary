@@ -1,0 +1,94 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.kapt'
+    id 'org.jetbrains.kotlin.plugin.parcelize'
+}
+
+project.ext {
+    artifactId = 'cpplayer-external'
+    groupId = 'pl.cyfrowypolsat'
+}
+
+android {
+    namespace 'pl.cyfrowypolsat.cpplayerexternal'
+    compileSdk project.ext.compileSdk
+
+    defaultConfig {
+        minSdk project.ext.minSdk
+        targetSdk project.ext.targetSdk
+        versionCode 1
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'proguard-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // CPPlayer core
+    implementation project(':cpplayer-core')
+
+    // CPStats
+    implementation project(':cpstats')
+
+    // AndroidX
+    implementation "androidx.appcompat:appcompat:$appCompatVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+    implementation "androidx.core:core-ktx:$coreVersion"
+    implementation "androidx.fragment:fragment-ktx:$fragmentVersion"
+    implementation "com.google.android.material:material:$materialVersion"
+
+    // RxJava
+    implementation "io.reactivex.rxjava3:rxandroid:$rxAndroidVersion"
+
+    // Timber
+    implementation "com.jakewharton.timber:timber:$timberVersion"
+
+    // Network
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava3:$retrofitVersion"
+    implementation platform("com.squareup.okhttp3:okhttp-bom:$okHttpVersion")
+    implementation "com.squareup.okhttp3:okhttp"
+    implementation "com.squareup.okhttp3:logging-interceptor"
+    implementation "com.google.code.gson:gson:$gsonVersion"
+
+
+    //Tests
+    testImplementation "junit:junit:$junitVersion"
+}
+
+apply from: '../publish_cprepo.gradle'
+
+task generateCprepo(type: Copy) {
+    group = "cprepo"
+    finalizedBy ':cpplayer-external:publishReleasePublicationToCprepoRepository'
+    finalizedBy ':cpcommon:publishReleasePublicationToCprepoRepository'
+    finalizedBy ':cpchromecast:publishReleasePublicationToCprepoRepository'
+    finalizedBy ':cpplayer-core:publishReleasePublicationToCprepoRepository'
+    finalizedBy ':cpstats:publishReleasePublicationToCprepoRepository'
+    finalizedBy ':gemius-sdk:publishAarPublicationToCprepoRepository'
+}

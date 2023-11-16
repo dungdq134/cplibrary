@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cppl_cr_tv_settings_background">
+
+    <ScrollView
+        android:layout_width="308dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|end"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/tv_track_selection_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="38dp"
+            android:paddingEnd="38dp"
+            android:paddingBottom="38dp">
+
+            <pl.cyfrowypolsat.cpplayercore.tv.trackselection.TvTrackSelectionView
+                android:id="@+id/tv_subtitle_selection_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <pl.cyfrowypolsat.cpplayercore.tv.trackselection.TvTrackSelectionView
+                android:id="@+id/tv_audio_selection_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/tv_track_selection_ok_button"
+                style="?attr/trackSelectionButtonStyle"
+                android:layout_width="253dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp"
+                android:nextFocusDown="@id/tv_track_selection_ok_button"
+                android:text="@string/cppl_cr_ok"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="maintenance_default_title">Awaria systemu</string>
+    <string name="maintenance_default_description">Pracujemy nad rozwiązaniem problemu.</string>
+    <string name="maintenance_auto_refresh">Automatyczne odświeżenie za <![CDATA[<b><font color="#000000">%s sekund</font></b>]]>.</string>
+</resources>

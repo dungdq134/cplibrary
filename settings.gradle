@@ -1,0 +1,25 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "cplibrary"
+include ':app'
+include ':cpcommon'
+include ':cpchromecast'
+include ':cpdata'
+include ':cpplayer-core'
+include ':gemius-sdk'
+include ':cpplayer-external'
+include ':cpstats'
+include ':cpplayer'

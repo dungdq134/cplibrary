@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CPData.Maintenance">
+        <attr name="maintenanceBackgroundImageStyle" format="reference" />
+        <attr name="maintenanceTextViewStyle" format="reference" />
+        <attr name="maintenanceCornerImageStyle" format="reference" />
+    </declare-styleable>
+
+</resources>

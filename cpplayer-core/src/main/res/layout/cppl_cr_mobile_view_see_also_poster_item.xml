@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/poster_see_also_item_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/poster_see_also_item_image_container"
+            style="?attr/seeAlsoItemPosterStyle">
+
+            <ImageView
+                android:id="@+id/poster_see_also_item_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/poster_see_also_item_age_restriction"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginEnd="3dp"
+                    android:scaleType="fitXY" />
+
+                <pl.cyfrowypolsat.cpcommon.presentation.ratingsystem.MediaBadgesView
+                    android:id="@+id/poster_see_also_item_media_badges"
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/poster_see_also_item_gradient"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="?attr/seeAlsoItemGradientStyle"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/poster_see_also_item_title_on"
+                style="?attr/seeAlsoItemTitleStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/cppl_cr_white_solid"
+                android:visibility="gone"
+                tools:text="SOUTH PARK"
+                tools:visibility="visible" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/poster_see_also_auto_play_progress"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_centerInParent="true"
+                app:trackThickness="19dp"
+                app:trackColor="@color/cppl_cr_grey_1b1b1c_transparent_cc"
+                app:indicatorColor="@color/cppl_cr_grey_9da2ab_transparent_cc"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/poster_see_also_auto_play_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/cppl_cr_common_ic_play"
+                android:alpha="0.3"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/poster_see_also_item_title_below"
+            style="?attr/seeAlsoItemTitleStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:minLines="2"
+            android:visibility="gone"
+            tools:text="SOUTH PARK"
+            tools:visibility="visible" />
+    </LinearLayout>
+</RelativeLayout>

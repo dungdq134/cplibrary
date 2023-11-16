@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/cppl_cr_grey_a9aeb4_transparent_70">
+    <item android:drawable="@drawable/cppl_cr_mobile_live_edge_indicator_background" />
+</ripple>

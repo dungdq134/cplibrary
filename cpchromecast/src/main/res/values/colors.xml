@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="cpchr_color_primary">#EEEEEE</color>
+    <color name="cpchr_white_solid">#ffffff</color>
+
+    <color name="cpchr_media_controller_dialog_color_primary">#FFFFFF</color>
+
+</resources>

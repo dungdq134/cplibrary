@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="CPData.Mobile.MaintenanceTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/cpdata_color_primary</item>
+        <item name="maintenanceBackgroundImageStyle">@style/CPData.Mobile.MaintenanceBackgroundImageStyle</item>
+        <item name="maintenanceTextViewStyle">@style/CPData.Mobile.MaintenanceTextViewStyle</item>
+        <item name="maintenanceCornerImageStyle">@style/CPData.Mobile.MaintenanceCornerImageStyle</item>
+    </style>
+
+    <style name="CPData.Mobile.MaintenanceBackgroundImageStyle" parent="">
+
+    </style>
+
+    <style name="CPData.Mobile.MaintenanceTextViewStyle" parent="@style/Widget.MaterialComponents.TextView">
+
+    </style>
+
+    <style name="CPData.Mobile.MaintenanceCornerImageStyle" parent="">
+
+    </style>
+
+</resources>

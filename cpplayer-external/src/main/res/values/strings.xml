@@ -1,0 +1,9 @@
+<resources>
+
+    <!-- Error -->
+    <string name="cppl_error_no_internet">Brak połączenia z Internetem. Sprawdź ustawienia sieci i spróbuj ponownie</string>
+    <string name="cppl_error_unknown_error">Wystąpił błąd. Uruchom ponownie aplikację, aby spróbować ponownie.</string>
+    <string name="cppl_error_with_code">Wystąpił błąd %1$s. Spróbuj ponownie.</string>
+
+
+</resources>

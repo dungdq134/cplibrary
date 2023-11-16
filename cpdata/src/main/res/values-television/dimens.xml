@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cpdata_maintenance_logo_margin_start">27dp</dimen>
+    <dimen name="cpdata_maintenance_logo_margin_top">27dp</dimen>
+    <dimen name="cpdata_maintenance_logo_size">29dp</dimen>
+</resources>

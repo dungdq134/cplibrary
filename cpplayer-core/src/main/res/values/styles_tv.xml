@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CPPlayerCore.Tv.CPPlayerTheme" parent="Theme.Leanback">
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="playbackControlsAutoHideTickleTimeout">15000</item>
+        <item name="android:windowBackground">@color/cppl_cr_black_solid</item>
+        <item name="android:windowContentTransitions">true</item>
+
+        <item name="trackSelectionButtonStyle">@style/CPPlayerCore.Tv.DefaultTrackSelectionButtonStyle</item>
+        <item name="trackSelectionNameTextViewStyle">@style/Widget.AppCompat.TextView</item>
+        <item name="trackSelectionItemNameTextViewStyle">@style/Widget.AppCompat.TextView</item>
+        <item name="settingsButtonStyle">@style/CPPlayerCore.Tv.DefaultTrackSelectionButtonStyle</item>
+        <item name="subtitleSettingsNameTextViewStyle">@style/Widget.AppCompat.TextView</item>
+        <item name="subtitleSettingsItemNameTextViewStyle">@style/Widget.AppCompat.TextView</item>
+
+        <item name="playbackControlsAtLiveEdgeIndicatorStyle">@style/Widget.AppCompat.TextView</item>
+
+        <item name="playbackPrimaryControlsButtonStyle">@style/Widget.Leanback.PlaybackControlsButtonStyle</item>
+        <item name="playbackSecondaryControlsButtonStyle">@style/CPPlayerCore.Tv.PlaybackSecondaryControlsButtonStyle</item>
+        <item name="playbackControlsActionIcons">@style/CPPlayerCore.Tv.PlaybackControlsActionIconsStyle</item>
+
+        <item name="skipIntroButtonStyle">@style/Widget.AppCompat.Button</item>
+        <item name="nextEpisodeButtonStyle">@style/Widget.AppCompat.Button</item>
+    </style>
+
+    <style name="CPPlayerCore.Tv.DefaultTrackSelectionButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="CPPlayerCore.Tv.PlaybackControlsActionIconsStyle" parent="Widget.Leanback.PlaybackControlsActionIconsStyle">
+        <item name="play">@drawable/cppl_cr_common_ic_play</item>
+        <item name="pause">@drawable/cppl_cr_common_ic_pause</item>
+    </style>
+
+    <style name="CPPlayerCore.Tv.PlaybackSecondaryControlsButtonStyle" parent="Widget.Leanback.PlaybackControlsButtonStyle">
+        <item name="android:layout_width">31dp</item>
+        <item name="android:layout_height">31dp</item>
+    </style>
+
+</resources>

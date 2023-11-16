@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MediaRouteControllerDialogTheme" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="colorPrimary">@color/cpchr_media_controller_dialog_color_primary</item>
+        <item name="colorAccent">@color/cpchr_color_primary</item>
+    </style>
+
+</resources>

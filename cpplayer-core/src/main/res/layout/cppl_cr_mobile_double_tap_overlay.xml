@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cppl_cr_transparent"
+    android:orientation="horizontal"
+    android:weightSum="2">
+
+    <pl.cyfrowypolsat.cpplayercore.mobile.doubletap.DoubleTapView
+        android:id="@+id/rewind_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <pl.cyfrowypolsat.cpplayercore.mobile.doubletap.DoubleTapView
+        android:id="@+id/fast_forward_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+</LinearLayout>

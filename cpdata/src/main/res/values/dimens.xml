@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cpdata_title_textview_width">310dp</dimen>
+    <dimen name="cpdata_description_textview_width">288.5dp</dimen>
+
+
+    <dimen name="cpdata_maintenance_logo_margin_start">8dp</dimen>
+    <dimen name="cpdata_maintenance_logo_margin_top">10dp</dimen>
+    <dimen name="cpdata_maintenance_logo_size">40dp</dimen>
+</resources>

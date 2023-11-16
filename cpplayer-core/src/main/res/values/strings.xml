@@ -1,0 +1,61 @@
+<resources>
+
+    <string name="exo_controls_play_description">Odtwarzaj</string>
+    <string name="exo_controls_pause_description">Zatrzymaj odtwarzanie</string>
+
+    <string name="cppl_cr_ok">OK</string>
+    <string name="cppl_cr_audio">Ścieżka dźwiękowa</string>
+    <string name="cppl_cr_subtitles">Napisy</string>
+    <string name="cppl_cr_subtitles_disabled_name">wyłączone</string>
+    <string name="cppl_cr_subtitles_size">Rozmiar napisów</string>
+    <string name="cppl_cr_subtitle_text_size_100_percent_name">100%</string>
+    <string name="cppl_cr_subtitle_text_size_75_percent_name">75%</string>
+    <string name="cppl_cr_subtitle_text_size_150_percent_name">150%</string>
+    <string name="cppl_cr_subtitle_text_size_200_percent_name">200%</string>
+    <string name="cppl_cr_subtitles_contrast">Wysoki kontrast napisów</string>
+    <string name="cppl_cr_subtitle_contrast_on">Włączony</string>
+    <string name="cppl_cr_subtitle_contrast_off">Wyłączony</string>
+    <string name="cppl_cr_skip_intro">Pomiń czołówkę</string>
+    <string name="cppl_cr_next_episode">Następny odcinek</string>
+    <string name="cppl_cr_is_at_live_edge">Na żywo</string>
+    <string name="cppl_cr_watch_live">Oglądaj na żywo</string>
+    <string name="cppl_cr_come_back">Wróć</string>
+
+    <string name="cppl_cr_action_subtitles_and_audio">Ścieżka dźwiękowa i napisy</string>
+    <string name="cppl_cr_action_settings">Ustawienia</string>
+    <string name="cppl_cr_action_overlay">Strefa kibica</string>
+
+    <string name="cppl_cr_double_tap_rewind">-%d s</string>
+    <string name="cppl_cr_double_tap_forward">+%d s</string>
+
+    <!-- Widevine -->
+    <string name="cppl_cr_widevine_level_1">Level 1</string>
+    <string name="cppl_cr_widevine_level_3">Level 3</string>
+    <string name="cppl_cr_widevine_not_supported">Nie obsługiwany</string>
+    <string name="cppl_cr_widevine_no_drm_data">Brak informacji</string>
+
+    <!-- Picture-In-Picture -->
+    <string name="cppl_cr_pip_rewind">-10s</string>
+    <string name="cppl_cr_pip_play">Odtwarzaj</string>
+    <string name="cppl_cr_pip_pause">Pauza</string>
+    <string name="cppl_cr_pip_forward">+10s</string>
+
+    <!-- See also -->
+    <string name="cppl_cr_see_also">Zobacz także</string>
+
+    <!-- Unlock -->
+    <string name="cppl_cr_unlock">Odblokuj</string>
+    <string name="cppl_cr_drag_to_unlock">Przeciągnij, aby odblokować</string>
+
+    <!-- Talkback -->
+    <string name="cppl_cr_talkback_subtitles_and_audio">Ustawienia napisów i dźwięku</string>
+    <string name="cppl_cr_settings">Ustawienia</string>
+    <string name="cppl_cr_padlock">Blokada ekranu</string>
+    <string name="cppl_cr_talkback_chromecast">Chromecast</string>
+    <string name="cppl_cr_talkback_close_player">Zamknij odtwarzacz</string>
+    <string name="cppl_cr_talkback_rewind">Cofnij o 10 sekund</string>
+    <string name="cppl_cr_talkback_ffw">Przewiń o 10 sekund</string>
+    <string name="cppl_cr_talkback_start_over">Odtwórz od początku</string>
+    <string name="cppl_cr_talkback_close_next_episode">Zobacz napisy końcowe</string>
+    <string name="cppl_cr_talkback_close">Zamknij</string>
+</resources>

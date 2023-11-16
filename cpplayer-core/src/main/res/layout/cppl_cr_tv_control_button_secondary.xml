@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/secondary_button"
+    style="?attr/playbackSecondaryControlsButtonStyle"
+    android:scaleType="centerInside"
+    android:layout_marginEnd="10dp"
+    android:src="@drawable/cppl_cr_tv_settings_action_drawable"
+    tools:layout_height="wrap_content"
+    tools:layout_width="wrap_content" />
